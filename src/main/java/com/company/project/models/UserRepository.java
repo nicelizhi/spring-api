@@ -9,4 +9,4 @@ import com.company.project.models.YpcUsers;
 
 public interface UserRepository extends CrudRepository<YpcUsers, Integer> {
 
-}
+}//end

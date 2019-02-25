@@ -4,11 +4,7 @@ import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.provider.HibernateUtils;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -19,7 +15,7 @@ import com.company.project.models.UserRepository;
 import javax.transaction.Transactional;
 import java.util.Optional;
 
-@Controller    // This means that this class is a Controller
+@RestController    // This means that this class is a Controller
 @RequestMapping(path="/users") // This means URL's start with /demo (after Application path)
 public class UsersController {
     @Autowired // This means to get the bean called userRepository
@@ -84,7 +80,6 @@ public class UsersController {
     public @ResponseBody Optional<YpcUsers> getDetail(@RequestParam Integer user_id) {
         return userRepository.findById(user_id);
     }
-
 
 
 }
