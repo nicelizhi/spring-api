@@ -1,11 +1,11 @@
 package com.company.project.models;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 
 @Entity
-@Table (name = "ypc_order_goods")
+@Table (name = "ypc_order_goods", schema="SIMULATE")
 public class YpcOrderGoods {
-
   @Id
   @Column(name = "rec_id")
   @GeneratedValue (strategy=GenerationType.AUTO)

@@ -10,10 +10,15 @@ public class YpcOrderInfo {
   @Column(name = "order_id")
   @GeneratedValue(strategy=GenerationType.AUTO)
   private long orderId;
+  @Column(name = "order_sn")
   private String orderSn;
+  @Column(name = "user_id")
   private long userId;
+  @Column(name = "order_status")
   private long orderStatus;
+  @Column(name = "shipping_status")
   private long shippingStatus;
+  @Column(name = "pay_status")
   private long payStatus;
   private String consignee;
   private long country;
@@ -30,6 +35,7 @@ public class YpcOrderInfo {
   private String postscript;
   private long shippingId;
   private String shippingName;
+  @Column(name = "pay_id")
   private long payId;
   private String payName;
   private String howOos;

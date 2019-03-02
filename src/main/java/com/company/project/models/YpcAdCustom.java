@@ -5,7 +5,8 @@ import javax.persistence.*;
 @Entity
 @Table(name = "ypc_ad_custome")
 public class YpcAdCustom {
-
+  @Id
+  @GeneratedValue(strategy=GenerationType.AUTO)
   @Column(name = "ad_id")
   private long adId;
   @Column(name = "ad_type")
