@@ -1,15 +1,15 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-
+@Entity
+@Table (name = "ypc_area_region", schema="SIMULATE")
 public class YpcAreaRegion {
-
+  @Id
+  @GeneratedValue (strategy=GenerationType.AUTO)
+  @Column (name = "shipping_area_id")
   private long shippingAreaId;
+  @Column (name = "region_id")
   private long regionId;
 
 

@@ -1,24 +1,26 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-
+@Entity
+@Table(name = "ypc_agency",  schema="SIMULATE")
 public class YpcAgency {
 
-  private long agencyId;
+  @Id
+  @Column (name = "agency_id")
+  @GeneratedValue(strategy=GenerationType.AUTO)
+  private Integer agencyId;
+  @Column(name = "agency_name")
   private String agencyName;
+  @Column (name = "agency_desc")
   private String agencyDesc;
 
 
-  public long getAgencyId() {
+  public Integer getAgencyId() {
     return agencyId;
   }
 
-  public void setAgencyId(long agencyId) {
+  public void setAgencyId(Integer agencyId) {
     this.agencyId = agencyId;
   }
 

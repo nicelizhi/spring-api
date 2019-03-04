@@ -1,27 +1,40 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-
+@Entity
+@Table (name = "ypc_topic", schema="SIMULATE")
 public class YpcTopic {
 
+  @Id
+  @GeneratedValue(strategy=GenerationType.AUTO)
+  @Column (name = "topic_id")
   private long topicId;
+  @Column (name = "title")
   private String title;
+  @Column (name = "intro")
   private String intro;
+  @Column (name = "start_time")
   private long startTime;
+  @Column (name = "end_time")
   private long endTime;
+  @Column (name = "data")
   private String data;
+  @Column (name = "template")
   private String template;
+  @Column (name = "css")
   private String css;
+  @Column (name = "topic_img")
   private String topicImg;
+  @Column (name = "title_pic")
   private String titlePic;
+  @Column (name = "base_style")
   private String baseStyle;
+  @Column (name = "htmls")
   private String htmls;
+  @Column (name = "keywords")
   private String keywords;
+  @Column (name = "description")
   private String description;
 
 

@@ -22,5 +22,9 @@ public class GoodsController {
         return md5Password;
     }
 
+    @GetMapping(path = "/cancel")
+    public @ResponseBody String getCancelOrder(@RequestParam String orderId){
+        return orderId;
+    }
 
 }

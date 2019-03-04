@@ -1,6 +1,7 @@
 package com.company.project.models;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table (name="ypc_order_info" , schema="SIMULATE")
@@ -37,6 +38,7 @@ public class YpcOrderInfo {
   private String shippingName;
   @Column(name = "pay_id")
   private long payId;
+  @Column(name = "pay_name")
   private String payName;
   private String howOos;
   private String howSurplus;
@@ -81,7 +83,10 @@ public class YpcOrderInfo {
   private String callbackStatus;
   private long lastmodify;
 
-  private YpcOrderGoodsRepository ypcOrderGoodsRepository;
+  //private YpcOrderGoodsRepository ypcOrderGoodsRepository;
+
+  @OneToMany(mappedBy = "ypcOrderInfo")
+  private List<YpcOrderGoods> ypcOrderGoodsSet;
 
 
   public long getOrderId() {

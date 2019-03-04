@@ -5,4 +5,4 @@ import com.company.project.models.YpcOrderGoods;
 
 public interface YpcOrderGoodsRepository extends CrudRepository<YpcOrderGoods, Integer> {
 
-}
+}//end

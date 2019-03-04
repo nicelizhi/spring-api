@@ -6,63 +6,72 @@ import java.sql.Timestamp;
 @Entity
 @Table (name = "ypc_order_goods", schema="SIMULATE")
 public class YpcOrderGoods {
+
   @Id
-  @Column(name = "rec_id")
   @GeneratedValue (strategy=GenerationType.AUTO)
-  private long recId;
+  @Column(name = "rec_id")
+  private Integer recId;
   @Column (name = "order_id")
-  private long orderId;
+  private Integer orderId;
   @Column(name = "goods_id")
-  private long goodsId;
+  private Integer goodsId;
   @Column (name = "goods_name")
   private String goodsName;
   @Column (name = "goods_sn")
   private String goodsSn;
   @Column (name = "product_id")
-  private long productId;
+  private Integer productId;
   @Column (name = "goods_number")
-  private long goodsNumber;
+  private Integer goodsNumber;
   @Column (name = "market_price")
   private double marketPrice;
   @Column (name = "goods_price")
   private double goodsPrice;
   @Column (name = "discount_fee")
   private double discountFee;
+  @Column (name = "goods_attr")
   private String goodsAttr;
-  private long sendNumber;
-  private long isReal;
+  @Column (name = "send_number")
+  private Integer sendNumber;
+  @Column (name = "is_real")
+  private Integer isReal;
   @Column (name = "extension_code")
   private String extensionCode;
   @Column (name = "parent_id")
-  private long parentId;
-
-  private long isGift;
+  private Integer parentId;
+  @Column (name = "is_gift")
+  private Integer isGift;
+  @Column (name = "goods_attr_id")
   private String goodsAttrId;
 
+  @ManyToOne
+  @JoinColumn(name = "order_id", nullable = false)
+  private YpcOrderInfo ypcOrderInfo;
 
-  public long getRecId() {
+
+  public Integer getRecId() {
     return recId;
   }
 
-  public void setRecId(long recId) {
+  public void setRecId(Integer recId) {
     this.recId = recId;
   }
 
 
-  public long getOrderId() {
+  public Integer getOrderId() {
     return orderId;
   }
 
-  public void setOrderId(long orderId) {
+  public void setOrderId(Integer orderId) {
     this.orderId = orderId;
   }
 
 
-  public long getGoodsId() {
+  public Integer getGoodsId() {
     return goodsId;
   }
 
-  public void setGoodsId(long goodsId) {
+  public void setGoodsId(Integer goodsId) {
     this.goodsId = goodsId;
   }
 
@@ -85,20 +94,20 @@ public class YpcOrderGoods {
   }
 
 
-  public long getProductId() {
+  public Integer getProductId() {
     return productId;
   }
 
-  public void setProductId(long productId) {
+  public void setProductId(Integer productId) {
     this.productId = productId;
   }
 
 
-  public long getGoodsNumber() {
+  public Integer getGoodsNumber() {
     return goodsNumber;
   }
 
-  public void setGoodsNumber(long goodsNumber) {
+  public void setGoodsNumber(Integer goodsNumber) {
     this.goodsNumber = goodsNumber;
   }
 
@@ -143,16 +152,16 @@ public class YpcOrderGoods {
     return sendNumber;
   }
 
-  public void setSendNumber(long sendNumber) {
+  public void setSendNumber(Integer sendNumber) {
     this.sendNumber = sendNumber;
   }
 
 
-  public long getIsReal() {
+  public Integer getIsReal() {
     return isReal;
   }
 
-  public void setIsReal(long isReal) {
+  public void setIsReal(Integer isReal) {
     this.isReal = isReal;
   }
 
@@ -166,20 +175,20 @@ public class YpcOrderGoods {
   }
 
 
-  public long getParentId() {
+  public Integer getParentId() {
     return parentId;
   }
 
-  public void setParentId(long parentId) {
+  public void setParentId(Integer parentId) {
     this.parentId = parentId;
   }
 
 
-  public long getIsGift() {
+  public Integer getIsGift() {
     return isGift;
   }
 
-  public void setIsGift(long isGift) {
+  public void setIsGift(Integer isGift) {
     this.isGift = isGift;
   }
 

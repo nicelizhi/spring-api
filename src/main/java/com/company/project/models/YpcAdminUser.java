@@ -1,30 +1,45 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-
+@Entity
+@Table (name = "ypc_admin_user", schema="SIMULATE")
 public class YpcAdminUser {
 
+  @Id
+  @Column (name = "user_id")
   private long userId;
+  @Column (name = "user_name")
   private String userName;
+  @Column (name = "email")
   private String email;
+  @Column (name = "password")
   private String password;
+  @Column (name = "ec_salt")
   private String ecSalt;
+  @Column (name = "add_time")
   private long addTime;
+  @Column (name = "last_login")
   private long lastLogin;
+  @Column (name = "last_ip")
   private String lastIp;
+  @Column (name = "action_list")
   private String actionList;
+  @Column (name = "nav_list")
   private String navList;
+  @Column (name = "lang_type")
   private String langType;
+  @Column (name = "agency_id")
   private long agencyId;
+  @Column (name = "suppliers_id")
   private long suppliersId;
+  @Column (name = "todolist")
   private String todolist;
+  @Column (name = "role_id")
   private long roleId;
+  @Column (name = "passport_uid")
   private String passportUid;
+  @Column (name = "yq_create_time")
   private long yqCreateTime;
 
 
