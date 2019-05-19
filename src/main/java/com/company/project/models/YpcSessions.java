@@ -1,17 +1,17 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ypc_sessions", schema = "SIMULATE")
 public class YpcSessions {
 
+  @Id
+  @Column(name = "sesskey")
   private String sesskey;
+  @Column(name = "expirt")
   private long expiry;
+  @Column(name = "userid")
   private long userid;
   private long adminid;
   private String ip;

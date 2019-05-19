@@ -1,23 +1,30 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ypc_config", schema = "SIMULATE")
 public class YpcConfig {
 
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(name = "id")
   private long id;
+  @Column(name = "name")
   private String name;
+  @Column(name = "type")
   private String type;
+  @Column(name = "description")
   private String description;
+  @Column(name = "code")
   private String code;
+  @Column(name = "config")
   private String config;
+  @Column(name = "status")
   private long status;
+  @Column(name = "created_at")
   private java.sql.Timestamp createdAt;
+  @Column(name = "updated_at")
   private java.sql.Timestamp updatedAt;
 
 

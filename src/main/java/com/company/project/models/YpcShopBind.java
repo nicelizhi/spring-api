@@ -1,20 +1,24 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ypc_shop_bind", schema = "SIMULATE")
 public class YpcShopBind {
 
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(name = "shop_id")
   private long shopId;
+  @Column(name = "name")
   private String name;
+  @Column(name = "node_id")
   private String nodeId;
+  @Column(name = "node_type")
   private String nodeType;
+  @Column(name = "status")
   private String status;
+  @Column(name = "app_url")
   private String appUrl;
 
 

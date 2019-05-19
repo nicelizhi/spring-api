@@ -6,9 +6,13 @@ import javax.persistence.*;
 @Table(name = "ypc_adsense", schema = "SIMULATE")
 public class YpcAdsense {
 
-  private long fromAd;
-  private String referer;
-  private long clicks;
+    @Id
+    @Column(name = "form_ad")
+    private long fromAd;
+    @Column(name = "referer")
+    private String referer;
+    @Column(name = "clicks")
+    private long clicks;
 
 
   public long getFromAd() {
