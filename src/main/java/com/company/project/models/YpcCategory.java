@@ -1,28 +1,41 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.graalvm.compiler.api.replacements.ClassSubstitution;
+
+import javax.persistence.*;
 
 
 @Entity
 @Table(name = "ypc_category", schema = "SIMULATE")
 public class YpcCategory {
 
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(name = "cat_id")
   private long catId;
+  @Column(name = "cat_name")
   private String catName;
+  @Column(name = "keywords")
   private String keywords;
+  @Column(name = "cat_desc")
   private String catDesc;
+  @Column(name = "parent_id")
   private long parentId;
+  @Column(name = "sort_order")
   private long sortOrder;
+  @Column(name = "template_file")
   private String templateFile;
+  @Column(name = "measure_unit")
   private String measureUnit;
+  @Column(name = "show_in_nav")
   private long showInNav;
+  @Column(name = "style")
   private String style;
+  @Column(name = "is_show")
   private long isShow;
+  @Column(name = "grade")
   private long grade;
+  @Column(name = "filter_attr")
   private String filterAttr;
 
 

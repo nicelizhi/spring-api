@@ -1,17 +1,15 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ypc_cat_recommend", schema = "SIMULATE")
 public class YpcCatRecommend {
 
+  @Id
+  @Column(name = "cat_id")
   private long catId;
+  @Column(name = "recommend_type")
   private long recommendType;
 
 
