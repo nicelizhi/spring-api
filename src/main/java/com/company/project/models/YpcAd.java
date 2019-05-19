@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 
 @Entity
-@Table (name = "ypc_ad")
+@Table(name = "ypc_ad", schema = "SIMULATE")
 public class YpcAd {
 
   @Id

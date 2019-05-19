@@ -3,7 +3,7 @@ package com.company.project.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "ypc_ad_custome")
+@Table(name = "ypc_ad_custome", schema = "SIMULATE")
 public class YpcAdCustom {
   @Id
   @GeneratedValue(strategy=GenerationType.AUTO)
