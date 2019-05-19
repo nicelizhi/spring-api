@@ -1,20 +1,26 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ypc_wholesale", schema = "SIMULATE")
 public class YpcWholesale {
 
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(name = "act_id")
   private long actId;
+  @Column(name = "goods_id")
   private long goodsId;
+  @Column(name = "goods_name")
   private String goodsName;
+  @Column(name = "rank_ids")
   private String rankIds;
+
+  @Column(name = "prices")
   private String prices;
+
+  @Column(name = "enabled")
   private long enabled;
 
 

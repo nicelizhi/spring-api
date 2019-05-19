@@ -1,15 +1,13 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ypc_vote_option", schema = "SIMULATE")
 public class YpcVoteOption {
-
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(name = "option_id")
   private long optionId;
   private long voteId;
   private String optionName;

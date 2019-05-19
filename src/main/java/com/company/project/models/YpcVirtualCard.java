@@ -1,24 +1,31 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ypc_virtual_card", schema = "SIMULATE")
 public class YpcVirtualCard {
 
-  private long cardId;
-  private long goodsId;
-  private String cardSn;
-  private String cardPassword;
-  private long addDate;
-  private long endDate;
-  private long isSaled;
-  private String orderSn;
-  private String crc32;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "card_id")
+    private long cardId;
+    @Column(name = "goods_id")
+    private long goodsId;
+    @Column(name = "card_sn")
+    private String cardSn;
+    @Column(name = "card_password")
+    private String cardPassword;
+    @Column(name = "add_date")
+    private long addDate;
+    @Column(name = "end_date")
+    private long endDate;
+    @Column(name = "is_saled")
+    private long isSaled;
+    @Column(name = "order_sn")
+    private String orderSn;
+    @Column(name = "crc32")
+    private String crc32;
 
 
   public long getCardId() {
