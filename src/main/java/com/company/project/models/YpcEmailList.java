@@ -1,18 +1,20 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ypc_email_list", schema = "SIMULATE")
 public class YpcEmailList {
 
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(name = "id")
   private long id;
+  @Column(name = "email")
   private String email;
+  @Column(name = "stat")
   private long stat;
+  @Column(name = "hash")
   private String hash;
 
 

@@ -1,21 +1,26 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ypc_email_sendlist", schema = "SIMULATE")
 public class YpcEmailSendlist {
 
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(name = "msg_id")
   private long id;
+  @Column(name = "email")
   private String email;
+  @Column(name = "template_id")
   private long templateId;
+  @Column(name = "email_content")
   private String emailContent;
+  @Column(name = "error")
   private long error;
+  @Column(name = "pri")
   private long pri;
+  @Column(name = "last_send")
   private long lastSend;
 
 

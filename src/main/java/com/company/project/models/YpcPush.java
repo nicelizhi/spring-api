@@ -1,29 +1,42 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ypc_push", schema = "SIMULATE")
 public class YpcPush {
 
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(name = "id")
   private long id;
+  @Column(name = "user_id")
   private long userId;
+  @Column(name = "title")
   private String title;
+  @Column(name = "conteent")
   private String content;
+  @Column(name = "photo")
   private String photo;
+  @Column(name = "object_id")
   private String objectId;
+  @Column(name = "link")
   private String link;
+  @Column(name = "platform")
   private long platform;
+  @Column(name = "push_type")
   private long pushType;
+  @Column(name = "message_type")
   private long messageType;
+  @Column(name = "is_push")
   private long isPush;
+  @Column(name = "push_at")
   private java.sql.Timestamp pushAt;
+  @Column(name = "status")
   private long status;
+  @Column(name = "created_at")
   private java.sql.Timestamp createdAt;
+  @Column(name = "updated_at")
   private java.sql.Timestamp updatedAt;
 
 

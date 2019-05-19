@@ -6,6 +6,7 @@ import javax.persistence.*;
 @Table(name = "ypc_volume_price", schema = "SIMULATE")
 public class YpcVolumePrice {
 
+  @Id
   @Column(name = "price_type")
   private long priceType;
 

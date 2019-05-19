@@ -1,22 +1,26 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ypc_device", schema = "SIMULATE")
 public class YpcDevice {
 
-  private long userId;
-  private String deviceId;
-  private String deviceType;
-  private String platformType;
-  private long status;
-  private java.sql.Timestamp createdAt;
-  private java.sql.Timestamp updatedAt;
+    @Id
+    @Column(name = "user_id")
+    private long userId;
+    @Column(name = "device_id")
+    private String deviceId;
+    @Column(name = "device_type")
+    private String deviceType;
+    @Column(name = "platform_type")
+    private String platformType;
+    @Column(name = "status")
+    private long status;
+    @Column(name = "created_at")
+    private java.sql.Timestamp createdAt;
+    @Column(name = "updated_at")
+    private java.sql.Timestamp updatedAt;
 
 
   public long getUserId() {

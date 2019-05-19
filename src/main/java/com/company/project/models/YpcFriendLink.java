@@ -1,19 +1,22 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ypc_friend_link", schema = "SIMULATE")
 public class YpcFriendLink {
 
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(name = "link_id")
   private long linkId;
+  @Column(name = "link_name")
   private String linkName;
+  @Column(name = "link_url")
   private String linkUrl;
+  @Column(name = "link_logo")
   private String linkLogo;
+  @Column(name = "show_order")
   private long showOrder;
 
 
