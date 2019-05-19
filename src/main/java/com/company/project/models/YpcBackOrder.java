@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 
+@Entity
+@Table(name = "ypc_back_order", schema = "SIMULATE")
 public class YpcBackOrder {
 
   private long backId;

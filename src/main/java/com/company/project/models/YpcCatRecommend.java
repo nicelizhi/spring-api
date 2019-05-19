@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 
+@Entity
+@Table(name = "ypc_cat_recommend", schema = "SIMULATE")
 public class YpcCatRecommend {
 
   private long catId;

@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 
+@Entity
+@Table(name = "ypc_callback_status", schema = "SIMULATE")
 public class YpcCallbackStatus {
 
   private long id;
