@@ -7,37 +7,39 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 
+@Entity
+@Table(name = "ypc_coincidence", schema = "SIMULATE")
 public class YpcCoincidence {
 
-  private String typeId;
-  private String type;
-  private long time;
+    private String typeId;
+    private String type;
+    private long time;
 
 
-  public String getTypeId() {
-    return typeId;
-  }
+    public String getTypeId() {
+        return typeId;
+    }
 
-  public void setTypeId(String typeId) {
-    this.typeId = typeId;
-  }
-
-
-  public String getType() {
-    return type;
-  }
-
-  public void setType(String type) {
-    this.type = type;
-  }
+    public void setTypeId(String typeId) {
+        this.typeId = typeId;
+    }
 
 
-  public long getTime() {
-    return time;
-  }
+    public String getType() {
+        return type;
+    }
 
-  public void setTime(long time) {
-    this.time = time;
-  }
+    public void setType(String type) {
+        this.type = type;
+    }
+
+
+    public long getTime() {
+        return time;
+    }
+
+    public void setTime(long time) {
+        this.time = time;
+    }
 
 }

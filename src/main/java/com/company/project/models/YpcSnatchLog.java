@@ -6,7 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
+@Entity
+@Table(name = "ypc_snatch_log", schema = "SIMULATE")
 public class YpcSnatchLog {
 
   private long logId;

@@ -6,7 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
+@Entity
+@Table(name = "ypc_user_feed", schema = "SIMULATE")
 public class YpcUserFeed {
 
   private long feedId;

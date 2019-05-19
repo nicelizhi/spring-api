@@ -6,7 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
+@Entity
+@Table(name = "ypc_volume_price", schema = "SIMULATE")
 public class YpcVolumePrice {
 
   private long priceType;

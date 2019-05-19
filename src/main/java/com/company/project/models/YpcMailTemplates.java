@@ -6,7 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
+@Entity
+@Table(name = "ypc_mail_templates", schema = "SIMULATE")
 public class YpcMailTemplates {
 
   private long templateId;

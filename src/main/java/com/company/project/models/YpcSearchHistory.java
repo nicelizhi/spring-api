@@ -6,7 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
+@Entity
+@Table(name = "ypc_search_history", schema = "SIMULATE")
 public class YpcSearchHistory {
 
   private long id;

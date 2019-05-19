@@ -6,7 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
+@Entity
+@Table(name = "ypc_sessions_data", schema = "SIMULATE")
 public class YpcSessionsData {
 
   private String sesskey;

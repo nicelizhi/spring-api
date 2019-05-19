@@ -6,7 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
+@Entity
+@Table(name = "ypc_shipping_area", schema = "SIMULATE")
 public class YpcShippingArea {
 
   private long shippingAreaId;

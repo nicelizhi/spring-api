@@ -6,7 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
+@Entity
+@Table(name = "ypc_virtual_card", schema = "SIMULATE")
 public class YpcVirtualCard {
 
   private long cardId;

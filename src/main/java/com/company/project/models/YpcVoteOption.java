@@ -6,7 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
+@Entity
+@Table(name = "ypc_vote_option", schema = "SIMULATE")
 public class YpcVoteOption {
 
   private long optionId;

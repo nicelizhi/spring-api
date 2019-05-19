@@ -6,7 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
+@Entity
+@Table(name = "ypc_reg_extend_info", schema = "SIMULATE")
 public class YpcRegExtendInfo {
 
   private long id;

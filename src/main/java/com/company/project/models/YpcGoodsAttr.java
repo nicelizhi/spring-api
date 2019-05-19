@@ -6,7 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
+@Entity
+@Table(name = "ypc_goods_attr", schema = "SIMULATE")
 public class YpcGoodsAttr {
 
   private long goodsAttrId;
