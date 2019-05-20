@@ -6,7 +6,10 @@ import javax.persistence.*;
 @Table(name = "ypc_admin_log", schema = "SIMULATE")
 public class YpcAdminLog {
 
-  private long logId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "log_id")
+    private long logId;
   private long logTime;
   private long userId;
   private String logInfo;

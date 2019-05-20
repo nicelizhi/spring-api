@@ -1,16 +1,15 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ypc_delivery_order", schema = "SIMULATE")
 public class YpcDeliveryOrder {
 
-  private long deliveryId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "delivery_id")
+    private long deliveryId;
   private String deliverySn;
   private String orderSn;
   private long orderId;

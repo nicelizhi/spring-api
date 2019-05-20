@@ -13,13 +13,20 @@ public class YpcSessions {
   private long expiry;
   @Column(name = "userid")
   private long userid;
-  private long adminid;
-  private String ip;
-  private String userName;
-  private long userRank;
-  private double discount;
-  private String email;
-  private String data;
+    @Column(name = "adminid")
+    private long adminid;
+    @Column(name = "ip")
+    private String ip;
+    @Column(name = "user_name")
+    private String userName;
+    @Column(name = "user_rank")
+    private long userRank;
+    @Column(name = "discount")
+    private double discount;
+    @Column(name = "email")
+    private String email;
+    @Column(name = "data")
+    private String data;
 
 
   public String getSesskey() {

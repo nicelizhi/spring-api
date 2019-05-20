@@ -6,7 +6,10 @@ import javax.persistence.*;
 @Table(name = "ypc_ad_admin_action", schema = "SIMULATE")
 public class YpcAdminAction {
 
-  private long actionId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "action_id")
+    private long actionId;
   private long parentId;
   private String actionCode;
   private String relevance;

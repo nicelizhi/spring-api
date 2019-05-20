@@ -1,16 +1,15 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ypc_booking_goods", schema = "SIMULATE")
 public class YpcBookingGoods {
 
-  private long recId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "rec_id")
+    private long recId;
   private long userId;
   private String email;
   private String linkMan;

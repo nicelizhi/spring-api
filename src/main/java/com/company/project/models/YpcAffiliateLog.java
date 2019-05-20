@@ -6,14 +6,23 @@ import javax.persistence.*;
 @Table(name = "ypc_affiliate_log", schema = "SIMULATE")
 public class YpcAffiliateLog {
 
-  private long logId;
-  private long orderId;
-  private long time;
-  private long userId;
-  private String userName;
-  private double money;
-  private long point;
-  private long separateType;
+    @Id
+    @Column(name = "log_id")
+    private long logId;
+    @Column(name = "order_id")
+    private long orderId;
+    @Column(name = "time")
+    private long time;
+    @Column(name = "user_id")
+    private long userId;
+    @Column(name = "user_name")
+    private String userName;
+    @Column(name = "money")
+    private double money;
+    @Column(name = "point")
+    private long point;
+    @Column(name = "separate_type")
+    private long separateType;
 
 
   public long getLogId() {

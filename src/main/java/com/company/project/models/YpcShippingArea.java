@@ -1,16 +1,15 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ypc_shipping_area", schema = "SIMULATE")
 public class YpcShippingArea {
 
-  private long shippingAreaId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "shipping_area_id")
+    private long shippingAreaId;
   private String shippingAreaName;
   private long shippingId;
   private String configure;

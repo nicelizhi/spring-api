@@ -1,16 +1,15 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ypc_pack", schema = "SIMULATE")
 public class YpcPack {
 
-  private long packId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "pack_id")
+    private long packId;
   private String packName;
   private String packImg;
   private double packFee;

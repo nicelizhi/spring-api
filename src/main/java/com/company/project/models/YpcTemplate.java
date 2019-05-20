@@ -1,16 +1,14 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ypc_template", schema = "SIMULATE")
 public class YpcTemplate {
 
-  private String filename;
+    @Id
+    @Column(name = "filename")
+    private String filename;
   private String region;
   private String library;
   private long sortOrder;

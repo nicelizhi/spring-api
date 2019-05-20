@@ -11,7 +11,7 @@ public class YpcOrderGoods {
   @GeneratedValue (strategy=GenerationType.AUTO)
   @Column(name = "rec_id")
   private Integer recId;
-  @Column (name = "order_id")
+  @Column(name = "order_id", insertable = false, updatable = false)
   private Integer orderId;
   @Column(name = "goods_id")
   private Integer goodsId;

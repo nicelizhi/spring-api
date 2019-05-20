@@ -6,6 +6,9 @@ import javax.persistence.*;
 @Table(name = "ypc_auction_log", schema = "SIMULATE")
 public class YpcAuctionLog {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "log_id")
     private long logId;
     private long actId;
     private long bidUser;

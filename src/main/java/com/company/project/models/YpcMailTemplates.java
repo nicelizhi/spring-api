@@ -1,16 +1,15 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ypc_mail_templates", schema = "SIMULATE")
 public class YpcMailTemplates {
 
-  private long templateId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "template_id")
+    private long templateId;
   private String templateCode;
   private long isHtml;
   private String templateSubject;

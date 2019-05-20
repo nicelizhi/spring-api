@@ -1,16 +1,14 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ypc_searchengine", schema = "SIMULATE")
 public class YpcSearchengine {
 
-  private java.sql.Date date;
+    @Id
+    @Column(name = "date")
+    private java.sql.Date date;
   private String searchengine;
   private long count;
 

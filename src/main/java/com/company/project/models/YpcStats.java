@@ -1,16 +1,14 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ypc_stats", schema = "SIMULATE")
 public class YpcStats {
 
-  private long accessTime;
+    @Id
+    @Column(name = "access_time")
+    private long accessTime;
   private String ipAddress;
   private long visitTimes;
   private String browser;

@@ -1,15 +1,13 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ypc_user_bonus", schema = "SIMULATE")
 public class YpcUserBonus {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "bonus_id")
   private long bonusId;
   private long bonusTypeId;
   private long bonusSn;

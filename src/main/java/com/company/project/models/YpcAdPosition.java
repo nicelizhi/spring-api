@@ -1,16 +1,15 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ypc_ad_position", schema = "SIMULATE")
 public class YpcAdPosition {
 
-  private long positionId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "position_id")
+    private long positionId;
   private String positionName;
   private long adWidth;
   private long adHeight;

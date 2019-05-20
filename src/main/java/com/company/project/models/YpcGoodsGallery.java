@@ -1,16 +1,15 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ypc_goods_gallery", schema = "SIMULATE")
 public class YpcGoodsGallery {
 
-  private long imgId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "img_id")
+    private long imgId;
   private long goodsId;
   private String imgUrl;
   private String imgDesc;

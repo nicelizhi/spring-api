@@ -6,7 +6,10 @@ import javax.persistence.*;
 @Table(name = "ypc_attribute", schema = "SIMULATE")
 public class YpcAttribute {
 
-  private long attrId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "attr_id")
+    private long attrId;
   private long catId;
   private String attrName;
   private long attrInputType;

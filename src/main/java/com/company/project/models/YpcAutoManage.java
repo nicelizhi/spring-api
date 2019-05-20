@@ -6,7 +6,10 @@ import javax.persistence.*;
 @Table(name = "ypc_auto_manage", schema = "SIMULATE")
 public class YpcAutoManage {
 
-  private long itemId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "item_id")
+    private long itemId;
   private String type;
   private long starttime;
   private long endtime;

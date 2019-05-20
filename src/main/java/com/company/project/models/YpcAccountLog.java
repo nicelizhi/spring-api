@@ -11,8 +11,10 @@ public class YpcAccountLog {
   @GeneratedValue(strategy=GenerationType.AUTO)
   @Column(name = "log_id")
   private long logId;
-  private long userId;
-  private double userMoney;
+    @Column(name = "user_id")
+    private long userId;
+    @Column(name = "user_money")
+    private double userMoney;
   private double frozenMoney;
   private long rankPoints;
   private long payPoints;

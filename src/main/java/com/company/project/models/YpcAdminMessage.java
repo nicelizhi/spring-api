@@ -6,7 +6,10 @@ import javax.persistence.*;
 @Table(name = "ypc_admin_message", schema = "SIMULATE")
 public class YpcAdminMessage {
 
-  private long messageId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "message_id")
+    private long messageId;
   private long senderId;
   private long receiverId;
   private long sentTime;

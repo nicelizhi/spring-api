@@ -1,17 +1,16 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 
 @Entity
 @Table(name = "ypc_back_order", schema = "SIMULATE")
 public class YpcBackOrder {
 
-  private long backId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "backid")
+    private long backId;
   private String deliverySn;
   private String orderSn;
   private long orderId;

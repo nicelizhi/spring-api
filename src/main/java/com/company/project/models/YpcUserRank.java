@@ -1,16 +1,14 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ypc_user_rank", schema = "SIMULATE")
 public class YpcUserRank {
 
-  private long rankId;
+    @Id
+    @Column(name = "rank_id")
+    private long rankId;
   private String rankName;
   private long minPoints;
   private long maxPoints;

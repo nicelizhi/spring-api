@@ -1,16 +1,14 @@
 package com.company.project.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ypc_order_review", schema = "SIMULATE")
 public class YpcOrderReview {
 
-  private long userId;
+    @Id
+    @Column(name = "user_id")
+    private long userId;
   private long orderId;
   private long goodsId;
 

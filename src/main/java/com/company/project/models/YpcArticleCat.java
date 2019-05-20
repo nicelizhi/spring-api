@@ -6,7 +6,10 @@ import javax.persistence.*;
 @Table(name = "ypc_article_cat", schema = "SIMULATE")
 public class YpcArticleCat {
 
-  private long catId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "cat_id")
+    private long catId;
   private String catName;
   private long catType;
   private String keywords;
