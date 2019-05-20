@@ -1,7 +1,7 @@
 package com.company.project.controller;
 
 import com.company.project.models.YpcTopic;
-import com.company.project.models.YpcTopicRepository;
+import com.company.project.repository.YpcTopicRepository;
 import com.google.common.net.HttpHeaders;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

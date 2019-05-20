@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.company.project.models.YpcOrderInfo;
-import com.company.project.models.YpcOrderInfoRepository;
+import com.company.project.repository.YpcOrderInfoRepository;
 
 import java.util.Optional;
 

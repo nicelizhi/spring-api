@@ -10,7 +10,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 import com.company.project.models.YpcUsers;
-import com.company.project.models.UserRepository;
+import com.company.project.repository.UserRepository;
 
 import javax.transaction.Transactional;
 import java.util.Optional;
